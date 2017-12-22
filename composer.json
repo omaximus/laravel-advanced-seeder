@@ -1,0 +1,33 @@
+{
+  "name": "omaximus/laravel-advanced-seeder",
+  "description": "Advanced seeding for laravel framework",
+  "keywords": ["laravel", "seed"],
+  "require": {
+    "php": ">=5.6.4",
+    "illuminate/console": "^5.0,<5.6",
+    "illuminate/database": "^5.0,<5.6",
+    "illuminate/filesystem": "^5.0,<5.6"
+  },
+  "require-dev": {
+
+  },
+  "autoload": {
+    "psr-4": {
+      "Pisockek\\LaravelSeeder\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pisockek\\LaravelSeeder\\Test\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pisockek\\LaravelSeeder\\ServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

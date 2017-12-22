@@ -1,0 +1,28 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Pisocheck\LaravelSeeder\Seed\Seed;
+
+class DummyClass extends Seed
+{
+    /**
+     * Run the seeds.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        //
+    }
+
+    /**
+     * Reverse the seeds.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+}
