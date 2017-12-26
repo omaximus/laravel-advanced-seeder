@@ -1,6 +1,6 @@
 <?php
 
-namespace Pisocheck\LaravelSeeder\Seed;
+namespace Pisochek\LaravelSeeder\Seed;
 
 use Illuminate\Database\ConnectionResolverInterface as Resolver;
 use Illuminate\Database\Schema\Blueprint;

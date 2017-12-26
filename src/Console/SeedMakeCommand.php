@@ -1,10 +1,10 @@
 <?php
 
-namespace Pisocheck\LaravelSeeder\Console;
+namespace Pisochek\LaravelSeeder\Console;
 
 use Illuminate\Support\Composer;
-use Pisocheck\LaravelSeeder\Seed\SeedCreator;
-use Pisocheck\LaravelSeeder\Seed\Seeder;
+use Pisochek\LaravelSeeder\Seed\SeedCreator;
+use Pisochek\LaravelSeeder\Seed\Seeder;
 
 class SeedMakeCommand extends BaseCommand
 {
@@ -26,7 +26,7 @@ class SeedMakeCommand extends BaseCommand
     /**
      * The seed creator instance.
      *
-     * @var \Pisocheck\LaravelSeeder\Seed\SeedCreator
+     * @var \Pisochek\LaravelSeeder\Seed\SeedCreator
      */
     protected $creator;
 
@@ -40,9 +40,9 @@ class SeedMakeCommand extends BaseCommand
     /**
      * Create a new seed install command instance.
      *
-     * @param \Pisocheck\LaravelSeeder\Seed\SeedCreator $creator
+     * @param \Pisochek\LaravelSeeder\Seed\SeedCreator $creator
      * @param \Illuminate\Support\Composer $composer
-     * @param \Pisocheck\LaravelSeeder\Seed\Seeder $seeder
+     * @param \Pisochek\LaravelSeeder\Seed\Seeder $seeder
      */
     public function __construct(SeedCreator $creator, Composer $composer, Seeder $seeder)
     {

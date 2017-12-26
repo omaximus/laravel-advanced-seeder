@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
-use Pisocheck\LaravelSeeder\Seed\Seed;
+use Pisochek\LaravelSeeder\Seed\Seed;
 
 class DummyClass extends Seed
 {
@@ -24,5 +24,25 @@ class DummyClass extends Seed
     public function down()
     {
         //
+    }
+
+    /**
+     * Check if seeding should be performed
+     *
+     * @return bool
+     */
+    public function checkUp()
+    {
+        return true;
+    }
+
+    /**
+     * Check if reverse seeding should be performed
+     *
+     * @return bool
+     */
+    public function checkDown()
+    {
+        return true;
     }
 }

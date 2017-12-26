@@ -1,9 +1,9 @@
 <?php
 
-namespace Pisocheck\LaravelSeeder\Console;
+namespace Pisochek\LaravelSeeder\Console;
 
 use Illuminate\Console\Command;
-use Pisocheck\LaravelSeeder\Seed\Seeder;
+use Pisochek\LaravelSeeder\Seed\Seeder;
 
 class BaseCommand extends Command
 {
@@ -39,6 +39,6 @@ class BaseCommand extends Command
      */
     protected function getSeedPath()
     {
-        return $this->laravel->databasePath() . DIRECTORY_SEPARATOR . 'seeds';
+        return $this->laravel->databasePath() . DIRECTORY_SEPARATOR . 'advanced-seeds';
     }
 }

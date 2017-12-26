@@ -1,6 +1,6 @@
 <?php
 
-namespace Pisocheck\LaravelSeeder\Console;
+namespace Pisochek\LaravelSeeder\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
@@ -18,7 +18,7 @@ class FreshCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected $description = 'Truncated all tables and re-run all seeds';
+    protected $description = 'Truncates all tables and re-run all seeds';
 
     /**
      * Execute the console command.
@@ -27,7 +27,7 @@ class FreshCommand extends Command
      */
     public function handle()
     {
-        if (! $this->confirmToProceed()) {
+        if (!$this->confirmToProceed()) {
             return;
         }
 
@@ -51,8 +51,8 @@ class FreshCommand extends Command
     protected function truncateAllTables($database)
     {
         $tables = $this->laravel['db']->connection($database)
-                            ->getSchemaBuilder()
-                            ->getAllTables();
+                                      ->getDoctrineSchemaManager()
+                                      ->listTableNames();
 
         foreach ($tables as $table) {
             $this->laravel['db']->connection($database)

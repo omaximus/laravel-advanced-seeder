@@ -1,6 +1,6 @@
 <?php
 
-namespace Pisocheck\LaravelSeeder\Seed;
+namespace Pisochek\LaravelSeeder\Seed;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -13,7 +13,7 @@ class Seeder
     /**
      * The seed repository implementation.
      *
-     * @var \Pisocheck\LaravelSeeder\Seed\SeedRepositoryInterface
+     * @var \Pisochek\LaravelSeeder\Seed\SeedRepositoryInterface
      */
     protected $repository;
 
@@ -55,7 +55,7 @@ class Seeder
     /**
      * Create a new seeder instance.
      *
-     * @param  \Pisocheck\LaravelSeeder\Seed\SeedRepositoryInterface  $repository
+     * @param  \Pisochek\LaravelSeeder\Seed\SeedRepositoryInterface  $repository
      * @param  \Illuminate\Database\ConnectionResolverInterface  $resolver
      * @param  \Illuminate\Filesystem\Filesystem  $files
      */
@@ -297,7 +297,7 @@ class Seeder
             return;
         }
 
-        if ($seed->checkUp()) {
+        if ($instance->checkDown()) {
             $this->runSeed($instance, 'down');
             $this->repository->delete($seed);
             $this->note("<info>Rolled back:</info>  {$name}");
@@ -309,7 +309,7 @@ class Seeder
     /**
      * Run a seed inside a transaction if the database supports it.
      *
-     * @param  \Pisocheck\LaravelSeeder\Seed\Seed  $seed
+     * @param  \Pisochek\LaravelSeeder\Seed\Seed  $seed
      * @param  string  $method
      *
      * @return void
@@ -370,7 +370,7 @@ class Seeder
      *
      * @param  string  $file
      *
-     * @return \Pisocheck\LaravelSeeder\Seed\Seed
+     * @return \Pisochek\LaravelSeeder\Seed\Seed
      */
     public function resolve($file)
     {
@@ -502,7 +502,7 @@ class Seeder
     /**
      * Get the seed repository instance.
      *
-     * @return \Pisocheck\LaravelSeeder\Seed\SeedRepositoryInterface
+     * @return \Pisochek\LaravelSeeder\Seed\SeedRepositoryInterface
      */
     public function getRepository()
     {

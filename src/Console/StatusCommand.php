@@ -1,6 +1,6 @@
 <?php
 
-namespace Pisocheck\LaravelSeeder\Console;
+namespace Pisochek\LaravelSeeder\Console;
 
 use Illuminate\Support\Collection;
 use Symfony\Component\Console\Input\InputOption;

@@ -1,9 +1,9 @@
 <?php
 
-namespace Pisocheck\LaravelSeeder\Console;
+namespace Pisochek\LaravelSeeder\Console;
 
 use Illuminate\Console\Command;
-use Pisocheck\LaravelSeeder\Seed\SeedRepositoryInterface;
+use Pisochek\LaravelSeeder\Seed\SeedRepositoryInterface;
 use Symfony\Component\Console\Input\InputOption;
 
 class InstallCommand extends Command
@@ -21,14 +21,14 @@ class InstallCommand extends Command
     /**
      * The repository instance.
      *
-     * @var \Pisocheck\LaravelSeeder\Seed\SeedRepositoryInterface
+     * @var \Pisochek\LaravelSeeder\Seed\SeedRepositoryInterface
      */
     protected $repository;
 
     /**
      * Create a new seed install command instance.
      *
-     * @param  \Pisocheck\LaravelSeeder\Seed\SeedRepositoryInterface  $repository
+     * @param  \Pisochek\LaravelSeeder\Seed\SeedRepositoryInterface  $repository
      */
     public function __construct(SeedRepositoryInterface $repository)
     {

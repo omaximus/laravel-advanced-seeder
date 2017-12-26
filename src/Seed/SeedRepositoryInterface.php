@@ -1,6 +1,6 @@
 <?php
 
-namespace Pisocheck\LaravelSeeder\Seed;
+namespace Pisochek\LaravelSeeder\Seed;
 
 interface SeedRepositoryInterface
 {
