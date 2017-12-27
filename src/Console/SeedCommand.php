@@ -13,7 +13,7 @@ class SeedCommand extends BaseCommand
      *
      * @var string
      */
-    protected $signature = 'seed {--database= : The database connection to use.}
+    protected $signature = 'aseed {--database= : The database connection to use.}
                 {--force : Force the operation to run when in production.}
                 {--path= : The path of seed files to be executed.}
                 {--pretend : Dump the SQL queries that would be run.}

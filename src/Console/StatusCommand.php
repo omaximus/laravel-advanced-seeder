@@ -12,7 +12,7 @@ class StatusCommand extends BaseCommand
      *
      * @var string
      */
-    protected $name = 'seed:status';
+    protected $name = 'aseed:status';
 
     /**
      * The console command description.

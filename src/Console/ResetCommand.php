@@ -14,7 +14,7 @@ class ResetCommand extends BaseCommand
      *
      * @var string
      */
-    protected $name = 'seed:reset';
+    protected $name = 'aseed:reset';
 
     /**
      * The console command description.

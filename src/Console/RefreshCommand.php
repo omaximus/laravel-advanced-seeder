@@ -13,7 +13,7 @@ class RefreshCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected $name = 'seed:refresh';
+    protected $name = 'aseed:refresh';
 
     /**
      * {@inheritdoc}

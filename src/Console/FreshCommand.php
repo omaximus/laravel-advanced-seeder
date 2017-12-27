@@ -13,7 +13,7 @@ class FreshCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected $name = 'seed:fresh';
+    protected $name = 'aseed:fresh';
 
     /**
      * {@inheritdoc}

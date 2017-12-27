@@ -14,7 +14,7 @@ class RollbackCommand extends BaseCommand
      *
      * @var string
      */
-    protected $name = 'seed:rollback';
+    protected $name = 'aseed:rollback';
 
     /**
      * The console command description.

@@ -11,7 +11,7 @@ class InstallCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected $name = 'seed:install';
+    protected $name = 'aseed:install';
 
     /**
      * {@inheritdoc}

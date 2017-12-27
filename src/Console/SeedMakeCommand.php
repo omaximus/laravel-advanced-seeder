@@ -13,7 +13,7 @@ class SeedMakeCommand extends BaseCommand
      *
      * @var string
      */
-    protected $signature = 'make:seed {name : The name of the seed.}
+    protected $signature = 'make:aseed {name : The name of the seed.}
         {--path= : The location where the seed file should be created.}';
 
     /**
