@@ -21,76 +21,76 @@ class ServiceProvider extends IlluminateServiceProvider
 
     public function register()
     {
-        $this->app->singleton('seed.repository', function ($app) {
+        $this->app->singleton('aseed.repository', function ($app) {
             return new DatabaseSeedRepository($app['db'], $app['config']['database.seeds']);
         });
 
-        $this->app->singleton('seeder', function ($app) {
-            return new Seeder($app['seed.repository'], $app['db'], $app['files']);
+        $this->app->singleton('aseeder', function ($app) {
+            return new Seeder($app['aseed.repository'], $app['db'], $app['files']);
         });
 
-        $this->app->singleton('seed.creator', function ($app) {
+        $this->app->singleton('aseed.creator', function ($app) {
             return new SeedCreator($app['files']);
         });
 
-        $this->app->singleton('command.seed', function ($app) {
-            return new SeedCommand($app['seeder']);
+        $this->app->singleton('command.aseed', function ($app) {
+            return new SeedCommand($app['aseeder']);
         });
 
-        $this->app->singleton('command.seed.fresh', function () {
+        $this->app->singleton('command.aseed.fresh', function () {
             return new FreshCommand();
         });
 
-        $this->app->singleton('command.seed.install', function ($app) {
-            return new InstallCommand($app['seed.repository']);
+        $this->app->singleton('command.aseed.install', function ($app) {
+            return new InstallCommand($app['aseed.repository']);
         });
 
-        $this->app->singleton('command.seed.refresh', function () {
+        $this->app->singleton('command.aseed.refresh', function () {
             return new RefreshCommand();
         });
 
-        $this->app->singleton('command.seed.reset', function ($app) {
-            return new ResetCommand($app['seeder']);
+        $this->app->singleton('command.aseed.reset', function ($app) {
+            return new ResetCommand($app['aseeder']);
         });
 
-        $this->app->singleton('command.seed.rollback', function ($app) {
-            return new RollbackCommand($app['seeder']);
+        $this->app->singleton('command.aseed.rollback', function ($app) {
+            return new RollbackCommand($app['aseeder']);
         });
 
-        $this->app->singleton('command.seed.make', function ($app) {
-            return new SeedMakeCommand($app['seed.creator'], $app['composer'], $app['seeder']);
+        $this->app->singleton('command.aseed.make', function ($app) {
+            return new SeedMakeCommand($app['aseed.creator'], $app['composer'], $app['aseeder']);
         });
 
-        $this->app->singleton('command.seed.status', function ($app) {
-            return new StatusCommand($app['seeder']);
+        $this->app->singleton('command.aseed.status', function ($app) {
+            return new StatusCommand($app['aseeder']);
         });
 
         $this->commands(
-            'command.seed',
-            'command.seed.fresh',
-            'command.seed.install',
-            'command.seed.refresh',
-            'command.seed.reset',
-            'command.seed.rollback',
-            'command.seed.make',
-            'command.seed.status'
+            'command.aseed',
+            'command.aseed.fresh',
+            'command.aseed.install',
+            'command.aseed.refresh',
+            'command.aseed.reset',
+            'command.aseed.rollback',
+            'command.aseed.make',
+            'command.aseed.status'
         );
     }
 
     public function provides()
     {
         return [
-            'seed.repository',
-            'seeder',
-            'seed.creator',
-            'command.seed',
-            'command.seed.fresh',
-            'command.seed.install',
-            'command.seed.refresh',
-            'command.seed.reset',
-            'command.seed.rollback',
-            'command.seed.make',
-            'command.seed.status'
+            'aseed.repository',
+            'aseeder',
+            'aseed.creator',
+            'command.aseed',
+            'command.aseed.fresh',
+            'command.aseed.install',
+            'command.aseed.refresh',
+            'command.aseed.reset',
+            'command.aseed.rollback',
+            'command.aseed.make',
+            'command.aseed.status'
         ];
     }
 }
